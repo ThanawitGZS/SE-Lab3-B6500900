@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Cat Clone</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .cat {
+            cursor: pointer;
+            width: 200px;
+            transition: transform 0.1s;
+        }
+
+        .cat:active {
+            transform: scale(1.2);
+        }
+
+        .counter {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.imgur.com/OXo4M1t.png" alt="Pop Cat" class="cat" onclick="popCat()">
+        <div class="counter" id="counter">0</div>
+    </div>
+
+    <script>
+        let count = 0;
+
+        function popCat() {
+            count++;
+            document.getElementById("counter").textContent = count;
+        }
+    </script>
+</body>
+</html>
